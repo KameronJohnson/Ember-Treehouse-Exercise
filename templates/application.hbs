@@ -1,0 +1,13 @@
+<div class="container">
+ <!-- This application.hbs makes it so we don't need the same nav code or div container class in all of our routes -->
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
+      <li>{{#link-to 'about'}}About{{/link-to}}</li>
+      <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+    </ul>
+  </nav>
+
+  {{outlet}}
+
+</div>

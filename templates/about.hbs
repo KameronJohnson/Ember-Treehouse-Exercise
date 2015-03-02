@@ -1,0 +1,12 @@
+<h1>About Dracula</h1>
+
+<hr>
+
+<button class="btn btn-danger" {{action 'showRealName'}}>About Dracula</button>
+
+{{#if isPictureShowing}}
+<button class="btn btn-danger" {{action 'hidePicture'}}>Hide Dracula</button>
+<p><img src="img/Dracula.jpg" alt="dracula photo"></p>
+{{else}}
+<button class="btn btn-danger" {{action 'showPicture'}}>Show Dracula</button>
+{{/if}}

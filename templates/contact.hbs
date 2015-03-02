@@ -1,0 +1,24 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <h1>contact</h1>
+    <ul>
+      <li>{{#link-to 'phone'}}Phone{{/link-to}}</li>
+      <li>{{#link-to 'email'}}Email{{/link-to}}</li>
+    </ul>
+
+    {{#if messageSent}}
+    <p>Message delivered to Drac, confirmation number is {{confirmationNumber}}.</p>
+    {{else}}
+    <p>Or, <a href="#" {{action 'sendMessage'}}>Send message to daddy.</a></p>
+    {{/if}}
+
+  </div>
+
+  <div class="col-md-6">
+    <!-- handlebars helper -->
+    {{outlet}}
+
+  </div>
+
+</div>
