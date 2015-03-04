@@ -1,6 +1,10 @@
-<h1>blog</h1>
+<h1>Dracula's Blog</h1>
 <ul>
-  <li><a href="#">Woohoo</a></li>
-  <li><a href="#">Oh Yeah</a></li>
-  <li><a href="#">mmmHmmmm</a></li>
+  {{#each}}
+    <li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
+  {{/each}}
 </ul>
+
+<p><a href='#' {{action 'sortByTitle'}}>Sort by title</a></p>
+
+<p>{{#link-to 'new-post' classNames="btn btn-primary"}}New scary post{{/link-to}}</p>
