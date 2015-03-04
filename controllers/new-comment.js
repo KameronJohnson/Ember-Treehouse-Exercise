@@ -1,4 +1,4 @@
-Blogger.NewCommentController = Ember.Controller.extend{{
+Blogger.NewCommentController = Ember.Controller.extend({
   needs: ['post'],
 //    we need access to this controller because the new comments route is nested in the post route,
 //    and we need access to post_id.
@@ -6,7 +6,7 @@ Blogger.NewCommentController = Ember.Controller.extend{{
     actions: {
     save: function() {
       var comment = this.store.createRecord('comment', {
-        text: this.get('text');
+        text: this.get('text')
       });
       comment.save();
 
